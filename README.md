@@ -4,7 +4,8 @@ This remote MCP server checks Shopify product CSV exports before import or catal
 
 The paid tool is `check_shopify_catalog_csv`. A call costs **3 USDC on Base mainnet** through x402 v2. `ping` and `catalog_service_info` are free.
 
-- MCP SSE endpoint: `https://7days.unlavsofts.xyz/mcp/sse`
+- MCP Streamable HTTP endpoint: `https://7days.unlavsofts.xyz/mcp`
+- Legacy MCP SSE endpoint: `https://7days.unlavsofts.xyz/mcp/sse`
 - Service page: `https://7days.unlavsofts.xyz/services/catalog-check/`
 - Health endpoint: `https://7days.unlavsofts.xyz/mcp/health`
 - Network: Base mainnet (`eip155:8453`)
@@ -16,7 +17,7 @@ Limits: 10 MiB and 10,000 product rows per call.
 
 ## MCP client configuration
 
-Use an MCP client that supports remote SSE servers and x402 MCP payments. Add the endpoint above, call `catalog_service_info` to inspect the current terms, and then call `check_shopify_catalog_csv` with `csv_text`.
+Use an MCP client that supports Streamable HTTP and x402 MCP payments. Add the primary endpoint above, call `catalog_service_info` to inspect the current terms, and then call `check_shopify_catalog_csv` with `csv_text`. The SSE endpoint remains available for older clients.
 
 An unpaid call returns an x402 payment requirement containing the exact amount, Base network, USDC asset, receiving address, and Bazaar discovery metadata. The client signs the payment authorization; this repository contains no wallet secret or signing key.
 

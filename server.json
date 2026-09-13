@@ -3,7 +3,7 @@
   "name": "io.github.Ivansky1/shopify-csv-catalog-check",
   "title": "UNLAV Shopify CSV Catalog Check",
   "description": "Paid Shopify CSV diagnostics for duplicate SKUs, malformed variants, and import risks.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "websiteUrl": "https://7days.unlavsofts.xyz/services/catalog-check/",
   "repository": {
     "url": "https://github.com/Ivansky1/unlav-shopify-catalog-check-mcp",
@@ -11,6 +11,10 @@
     "id": "R_kgDOUY6KJw"
   },
   "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://7days.unlavsofts.xyz/mcp"
+    },
     {
       "type": "sse",
       "url": "https://7days.unlavsofts.xyz/mcp/sse"
