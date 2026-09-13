@@ -2,10 +2,12 @@
 
 This remote MCP server checks Shopify product CSV exports before import or catalog maintenance. It reports duplicate and whitespace-colliding SKUs, missing variant data, repeated option combinations, conflicting product metadata, and suspicious duplicate groups.
 
-The paid tool is `check_shopify_catalog_csv`. A call costs **3 USDC on Base mainnet** through x402 v2. `ping` and `catalog_service_info` are free.
+The paid tool is `check_shopify_catalog_csv`. A call costs **0.05 USDC on Base mainnet** through x402 v2. `ping` and `catalog_service_info` are free.
 
 - MCP Streamable HTTP endpoint: `https://7days.unlavsofts.xyz/mcp`
 - Legacy MCP SSE endpoint: `https://7days.unlavsofts.xyz/mcp/sse`
+- REST endpoint: `POST https://7days.unlavsofts.xyz/api/catalog-check`
+- OpenAPI specification: `https://7days.unlavsofts.xyz/openapi.json`
 - Service page: `https://7days.unlavsofts.xyz/services/catalog-check/`
 - Health endpoint: `https://7days.unlavsofts.xyz/mcp/health`
 - Network: Base mainnet (`eip155:8453`)
